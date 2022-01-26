@@ -1,0 +1,5 @@
+resource_code.zip
+.mypy.ini
+**/__pycache__
+data
+output

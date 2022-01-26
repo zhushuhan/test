@@ -1,0 +1,11 @@
+pytorch==1.6.0
+torchvision==0.7.0
+cudatoolkit==10.2
+simpleitk
+numpy
+pillow
+ipykernel
+yacs
+timm
+opencv-python
+tensorboard

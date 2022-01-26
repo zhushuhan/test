@@ -1,0 +1,6 @@
+EXP_NAME: 'resnet18-5'
+MODEL:
+  NAME: 'resnet18'
+
+DATA:
+  SEED: 5

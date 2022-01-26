@@ -1,0 +1,25 @@
+#pytorch 1.5.1
+#torchvision 0.6.1
+#vs2015
+
+conda create -n detr python=3.7
+conda activate detr
+conda install pytorch torchvision cudatoolkit=10.1
+pip install install cython scipy
+
+#我这边直接用yolov5的环境
+
+安装pycocotools
+   cd cocoapi/PythonAPI
+   python setup.py build_ext install
+   
+#训练
+1、准备coco数据集
+2、运行change.py，修改num_class
+3、修改detr.py中的num_classes
+def build(args):
+    num_classes = 2 if args.dataset_file != 'coco' else 2
+    if args.dataset_file == "coco_panoptic":
+        num_classes = 2
+4、python main.py --dataset_file "coco" --coco_path data/coco --epochs 100 --lr=1e-4 --batch_size=2 --num_workers=4 --output_dir="outputs" --resume="detr-r50_3.pth"
+5、python Predict.py
